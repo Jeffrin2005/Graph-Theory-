@@ -6,6 +6,9 @@ public:
         for (auto& pre : prerequisites) {
             adj[pre[1]].push_back(pre[0]);
         }
+
+
+        
         vector<int>indegree(numCourses, 0);
         for (int i = 0; i < numCourses; i++) {
             for (auto it : adj[i]) {
