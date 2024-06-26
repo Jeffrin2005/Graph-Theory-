@@ -1,26 +1,27 @@
 class Solution {
-public:
-    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
-        vector<vector<int>>result;
-        queue<vector<int>>q;
+private:
+    void bfs(vector<vector<int>>& graph, vector<vector<int>>& result) {
+        queue<vector<int>> q;
         q.push({0});
-        while (!q.empty()){
-            vector<int>path = q.front();
+        while (!q.empty()) {
+            vector<int> path = q.front();
             q.pop();
-            int lastnode = path.back();
-            if(lastnode == graph.size() - 1){
+            int lastNode = path.back();
+            if (lastNode == graph.size() - 1) {
                 result.push_back(path);
-            }else{
-                for(auto&newnode : graph[lastnode]){
-                    vector<int>copy(path);
-                    copy.push_back(newnode);
-                    q.push(copy);
-
+            } else {
+                for (int newNode : graph[lastNode]) {
+                    vector<int> newPath(path);
+                    newPath.push_back(newNode);
+                    q.push(newPath);
                 }
             }
-
         }
+    }
+    public:
+    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
+        vector<vector<int>> result;
+        bfs(graph, result);
         return result;
-        
     }
 };
