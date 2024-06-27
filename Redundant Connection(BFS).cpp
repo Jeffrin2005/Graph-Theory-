@@ -3,6 +3,7 @@ public:
     int n;
 
     bool bfs(vector<vector<int>>& adj, int start, int end, vector<bool>& visited) {
+          if (start == end) return true; 
         queue<int> q;
         q.push(start);
         visited[start] = 1; 
