@@ -7,6 +7,7 @@ private:
         visited[start] = 1;
         vertices_count++;
 
+        
         while (!q.empty()) {
             int node = q.front();
             q.pop();
