@@ -3,6 +3,7 @@ public:
     int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
         vector<vector<int>> dist(n, vector<int>(n, INT_MAX));
         for (auto& x : edges) {
+            
             dist[x[0]][x[1]] = x[2];
             dist[x[1]][x[0]] = x[2];
         }
