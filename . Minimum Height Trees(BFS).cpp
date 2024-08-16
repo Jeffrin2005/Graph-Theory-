@@ -1,6 +1,5 @@
 class Solution {
 public:
-   
     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
     if (n == 1) return {0}; // Special case with only one node
     vector<int> degree(n, 0);
