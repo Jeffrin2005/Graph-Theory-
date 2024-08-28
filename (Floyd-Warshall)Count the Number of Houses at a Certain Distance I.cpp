@@ -5,6 +5,7 @@ public:
         y--;
         vector<vector<int>>dist(n , vector<int>(n, INT_MAX));
         for(int i=0; i<n; i++){
+            
             if(i > 0){
                 dist[i][i-1] = 1;
                 dist[i-1][i] = 1;
