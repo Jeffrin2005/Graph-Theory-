@@ -4,7 +4,6 @@
 
     dist[src] = 0;
     pq.push({0, src});
-
     while (!pq.empty()) {
         int u = pq.top().second;
         int d = pq.top().first;
