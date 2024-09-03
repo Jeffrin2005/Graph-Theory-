@@ -1,6 +1,7 @@
       private: 
   bool detect(int src, vector<int> adj[], vector<int>&vis) {
       vis[src] = 1; 
+        
       // store <source node, parent node>
       queue<pair<int,int>> q; 
       q.push({src, -1}); 
