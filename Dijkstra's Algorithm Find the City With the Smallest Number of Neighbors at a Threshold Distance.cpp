@@ -7,6 +7,7 @@ public:
                  adj[edge[1]].push_back({edge[0],edge[2]});
          }
          int cnt = INT_MAX;
+        
          int city =-1;
          for(int k=0;k<n;k++){ // Dijkstra's Algorithm
                  vector<int>distance(n, 1e9);
