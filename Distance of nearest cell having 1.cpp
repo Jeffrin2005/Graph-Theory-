@@ -6,6 +6,7 @@
 	    vector<vector<int>>vis(n,vector<int>(m,0));
 	    vector<vector<int>>dis(n,vector<int>(m,0));
 	       queue<pair<pair<int, int>, int>> q;
+		
 	    for(int i=0; i<n ;i++){
 	        for(int j=0; j<m; j++){
 	            if(grid[i][j] == 1){
