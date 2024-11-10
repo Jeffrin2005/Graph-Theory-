@@ -14,7 +14,6 @@ public:
           }else{
             vis[i][j] = 0;
           }
-          if(grid[i][j] == 1) cntFresh++;
         }
       }
       int tm = 0;
@@ -37,7 +36,11 @@ public:
           }
         }
       }
-      if(cnt != cntFresh) return -1;
+      for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(vis[i][j] != 2 && grid[i][j] == 1) return -1;
+        }
+      }
       return tm;
 
     }
