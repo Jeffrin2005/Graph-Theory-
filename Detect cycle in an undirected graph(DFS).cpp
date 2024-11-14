@@ -11,6 +11,8 @@ class Solution {
             else if(visited[neighbor]==1 && neighbor != parent){
                 return true;
             }
+         //   0 → 1 → 2 → 3 → 4
+//From 4, neighbor 1 is already visited and not the parent (parent is 3), indicating a cycle: 1 → 2 → 3 → 4 → 1.
         }
         return false;
     }
