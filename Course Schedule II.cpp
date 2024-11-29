@@ -7,6 +7,7 @@ public:
         }
         vector<int>v3;
         
+        
         vector<int>indegree(numCourses, 0);
         for (int i = 0; i < numCourses; i++) {
             for (auto it : adj[i]) {
