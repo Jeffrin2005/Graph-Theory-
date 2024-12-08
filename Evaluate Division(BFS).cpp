@@ -6,6 +6,7 @@ public:
         for (int i = 0; i < equations.size(); i++) {
             double k = values[i];
             graph[equations[i][0]][equations[i][1]] = k;
+            
             graph[equations[i][1]][equations[i][0]] = 1.0 / k;
         }
     }
