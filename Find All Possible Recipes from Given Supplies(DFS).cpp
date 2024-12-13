@@ -18,6 +18,7 @@ public:
         map<string, vector<string>> adj;
         int n = ingredients.size();
         for (int i = 0; i < n; i++) {
+
             for (auto& s : ingredients[i]) {
                 adj[s].push_back(recipes[i]);
                 indegree[recipes[i]]++;
